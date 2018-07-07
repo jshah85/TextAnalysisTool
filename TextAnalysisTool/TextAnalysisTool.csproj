@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79F1F8AB-4953-4679-BD2E-8B612FA4FECE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TextAnalysisTool</RootNamespace>
+    <AssemblyName>TextAnalysisTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyzer.cs" />
+    <Compile Include="CacheProvider.cs" />
+    <Compile Include="CmdLineProcessor.cs" />
+    <Compile Include="CorpusManager.cs" />
+    <Compile Include="DefinitionService.cs" />
+    <Compile Include="EssayManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexStore.cs" />
+    <Compile Include="WordDefintion.cs" />
+    <Compile Include="WordStatistic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Corpus\EssayFiles\abstractions-reverie.md" />
+    <None Include="Corpus\EssayFiles\concepts.md" />
+    <None Include="Corpus\EssayFiles\ideas-for-taking-universality-seriously.md" />
+    <None Include="Corpus\EssayFiles\not-anti-natalism.md" />
+    <None Include="Corpus\EssayFiles\notes-lookup-modes.md" />
+    <None Include="Corpus\EssayFiles\self-driving-cars-is-a-really-bad-idea.md" />
+    <None Include="Corpus\EssayFiles\the-age-of-self-reference.md" />
+    <None Include="Corpus\EssayFiles\the-machine-and-the-all.md" />
+    <None Include="Corpus\EssayFiles\the-predatory-ratio.md" />
+    <None Include="Corpus\EssayFiles\the-singularity.md" />
+    <None Include="Corpus\EssayFiles\there-is-no-particle.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Corpus\long.txt" />
+    <Content Include="Corpus\medium.txt" />
+    <Content Include="Corpus\short.txt" />
+    <Content Include="OxfordDictionary\wb1913_a.html" />
+    <Content Include="OxfordDictionary\wb1913_b.html" />
+    <Content Include="OxfordDictionary\wb1913_c.html" />
+    <Content Include="OxfordDictionary\wb1913_d.html" />
+    <Content Include="OxfordDictionary\wb1913_e.html" />
+    <Content Include="OxfordDictionary\wb1913_f.html" />
+    <Content Include="OxfordDictionary\wb1913_g.html" />
+    <Content Include="OxfordDictionary\wb1913_h.html" />
+    <Content Include="OxfordDictionary\wb1913_i.html" />
+    <Content Include="OxfordDictionary\wb1913_j.html" />
+    <Content Include="OxfordDictionary\wb1913_k.html" />
+    <Content Include="OxfordDictionary\wb1913_l.html" />
+    <Content Include="OxfordDictionary\wb1913_m.html" />
+    <Content Include="OxfordDictionary\wb1913_n.html" />
+    <Content Include="OxfordDictionary\wb1913_new.html" />
+    <Content Include="OxfordDictionary\wb1913_o.html" />
+    <Content Include="OxfordDictionary\wb1913_p.html" />
+    <Content Include="OxfordDictionary\wb1913_q.html" />
+    <Content Include="OxfordDictionary\wb1913_r.html" />
+    <Content Include="OxfordDictionary\wb1913_s.html" />
+    <Content Include="OxfordDictionary\wb1913_t.html" />
+    <Content Include="OxfordDictionary\wb1913_u.html" />
+    <Content Include="OxfordDictionary\wb1913_v.html" />
+    <Content Include="OxfordDictionary\wb1913_w.html" />
+    <Content Include="OxfordDictionary\wb1913_x.html" />
+    <Content Include="OxfordDictionary\wb1913_y.html" />
+    <Content Include="OxfordDictionary\wb1913_z.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
